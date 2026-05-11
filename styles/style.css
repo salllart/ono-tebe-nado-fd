@@ -1,9 +1,31 @@
+/* Общие стили */
+.main {
+  font-size: 20px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 240px;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.content-title {
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+
+/* Стилизация шапки */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  font-size: 18px;
   padding: 92px 50px 96px;
+  font-size: 18px;
 }
 
 .header__links-list {
@@ -29,51 +51,39 @@
   width: 135px;
 }
 
-.main {
-  font-size: 20px;
-}
-
-.address {
-  display: flex;
-  flex-direction: column;
-  line-height: 24px;
-  align-items: flex-start;
-  font-style: normal;
-  max-width: 240px;
-}
-
 .header__address {
   justify-self: end;
 }
 
+/* Стилизация входной секции */
 .cover {
   position: relative;
-  background-image: url(../images/cover.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-background-position: -140px bottom;
   z-index: 0;
   min-height: 757px;
   padding: 50px;
   color: white;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: -140px bottom;
+  background-size: cover;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: black;
-  opacity: 60%;
   z-index: -1;
+  opacity: 60%;
+  background-color: black;
 }
 
 .cover__title {
-	padding: 111px 0 105px;
-	color: white;
-	font-size: 100px;
-	text-transform: uppercase;
-	display: flex;
-	flex-direction: column;
-	gap: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 111px 0 105px;
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
 }
 
 .letter-spacing-extended {
@@ -103,74 +113,70 @@ background-position: -140px bottom;
 .cover__description {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-size: 22px;
   text-transform: uppercase;
   word-spacing: 19px;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .bet-button {
-  color: white;
-  background-color: transparent;
-  border: solid white 1px;
-  text-transform: uppercase;
   width: 255px;
   height: 50px;
+  border: solid white 1px;
+  color: white;
+  text-transform: uppercase;
+  background-color: transparent;
 }
 
+/* Стилизации секции с карточками*/
 .lots {
   margin: 180px 24px 120px;
 }
 
-.lots__heading{
+.lots__heading, .lots__look-more-link {
   margin-left: 40px;
 }
 
-.content-title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-/* Стилизация списка карточек и самих карточек */
 .lots__cards-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 25px;
   margin-top: 25px;
   margin-bottom: 31px;
-  flex-wrap: wrap;
 }
 
 .lots__cards-list-item {
   width: 334px;
   min-height: 596px;
+  color: white;
   list-style: none;
-  color:white;
 }
 
-.card-link{
+.card-link {
   height: 100%;
   text-decoration: none;
 }
 
 .card {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: 47px 41px;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__title {
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-size: 22px;
   font-weight: bold;
+  font-size: 22px;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .card__text {
@@ -179,32 +185,22 @@ background-position: -140px bottom;
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.lots__look-more-link {
-  margin-left: 40px;
-}
-
-/* Секция "Об акуционе" */
+/* Стилизаци секции об акуционе */
 .about {
   display: grid;
   grid-template-columns: 334px 1fr;
-  margin: 0 24px 180px;
   gap: 25px;
+  margin: 0 24px 180px;
 }
 
 .about__logo {
@@ -213,9 +209,9 @@ background-position: -140px bottom;
   align-items: center;
   width: 240px;
   height: 240px;
-  background-color: black;
-  border-radius: 100%;
   margin: 33px 48px;
+  border-radius: 100%;
+  background-color: black;
 }
 
 .about__logo-image {
@@ -237,9 +233,9 @@ background-position: -140px bottom;
 .footer {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  font-size: 18px;
-  padding: 0px 50px 82px;
   justify-content: space-between;
+  padding: 0px 50px 82px;
+  font-size: 18px;
 }
 
 .footer__menu-list-item {
@@ -260,8 +256,8 @@ background-position: -140px bottom;
 .footer__social-list {
   display: flex;
   flex-direction: row;
-  list-style: none;
   gap: 48px;
+  list-style: none;
 }
 
 .footer__social-link {
