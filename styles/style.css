@@ -40,12 +40,15 @@
   align-items: flex-start;
   font-style: normal;
   max-width: 240px;
+}
+
+.header__address {
   justify-self: end;
 }
 
 .cover {
   position: relative;
-  background-image: url(/images/cover.jpg);
+  background-image: url(../images/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 background-position: -140px bottom;
@@ -117,12 +120,11 @@ background-position: -140px bottom;
 }
 
 .lots {
-  margin: 180px 24px 60px;
+  margin: 180px 24px 120px;
 }
 
 .lots__heading{
   margin-left: 40px;
-  margin-bottom: 25px;
 }
 
 .content-title {
@@ -137,7 +139,9 @@ background-position: -140px bottom;
   flex-direction: row;
   justify-content: space-between;
   gap: 25px;
+  margin-top: 25px;
   margin-bottom: 31px;
+  flex-wrap: wrap;
 }
 
 .lots__cards-list-item {
@@ -174,19 +178,19 @@ background-position: -140px bottom;
 }
 
 .card_type_film {
-  background-image: url(/images/card-lot-01.jpg);
+  background-image: url(../images/card-lot-01.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .card_type_book {
-  background-image: url(/images/card-lot-02.jpg);
+  background-image: url(../images/card-lot-02.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .card_type_picture {
-  background-image: url(/images/card-lot-03.jpg);
+  background-image: url(../images/card-lot-03.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -195,9 +199,72 @@ background-position: -140px bottom;
   margin-left: 40px;
 }
 
+/* Секция "Об акуционе" */
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  margin: 0 24px 180px;
+  gap: 25px;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  background-color: black;
+  border-radius: 100%;
+  margin: 33px 48px;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__title {
+  margin: 133px 0 100px;
+}
+
+/* Стилизация подвала */
 .footer {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   font-size: 18px;
   padding: 0px 50px 82px;
+  justify-content: space-between;
+}
+
+.footer__menu-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social {
+  justify-self: end;
+}
+
+.footer__social-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 48px;
+}
+
+.footer__social-link {
+  display: block;
+  width: 48px;
 }
